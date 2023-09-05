@@ -1,0 +1,387 @@
+:root {
+    /* Colors */
+    --main-container-color: #fffdfb;
+    --primary-accent-color: #DC4E57;
+    --correct-answer-color: #387A5C;
+    --text-color: #000;
+
+    /* Fonts */ 
+    --Indie-Flower: 'Indie Flower', cursive, sans-serif;
+
+    /* Font size */
+    --title-size-mobile: 2.65rem;
+    --button-size-mobile: 1.5rem;
+    --message-size-mobile: 1.4rem;
+    --play-again-mobile: 1.9rem;
+
+    --title-size-1000px: 3.7rem;
+    --button-size-1000px: 2rem;
+    --message-size-1000px: 1.7rem;
+    --play-again-1000px: 2.2rem;
+
+    --title-size-1700px: 4.9rem;
+    --button-size-1700px: 3rem;
+    --message-size-1700px: 2.4rem;
+    --play-again-1700px: 3.2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /* Photo by FWStudio: https://www.pexels.com/photo/brown-wooden-surface-172296/ */
+    background: url("../public/images/pexels-fwstudio-172296.jpg") center / cover;
+    margin: 0;
+    padding: 1rem;
+    font-family: var(--Indie-Flower);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-pencil, .img-pencil-game, .img-black-pen-game {
+    display: none;
+}
+
+.main-container {
+    width: 350px;
+    min-height: 700px;
+    background-color: var(--main-container-color);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), -5px -5px 15px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-column {
+    position: relative;
+    display: grid;
+    justify-content: center;
+}
+
+.left-column-start-background {
+    background: url("../public/images/0.png") no-repeat center / 70%;
+}
+
+.title-letters-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    left: 208px;
+}
+
+.letter-title {
+    color: var(--primary-accent-color);
+    font-size: var(--title-size-mobile);
+    font-weight: bold;
+    line-height: 0.8;
+}
+
+.start-button-container {
+    display: grid;
+    justify-content: center;
+    position: relative;
+}
+
+.button-base {
+    font-family: var(--Indie-Flower);
+    font-size: var(--button-size-mobile);
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    color: var(--text-color);
+    background-color: var(--main-container-color);
+    border: none;
+    border-bottom: 2px solid var(--primary-accent-color);
+    justify-self: center;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.start-game {
+    align-self: start;
+    margin-top: 3.6rem;
+}
+
+.button-base:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.img-black-pen {
+    position: absolute;
+    width: 70%;
+    top: 82px;
+    left: 120px;
+    transform: rotate(20deg);
+}
+
+.img-flowers {
+    width: 75%;
+    margin: 0 auto;
+    align-self: end;
+}
+
+.right-column {
+    min-height: 470px;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto 2fr 1fr;
+    position: relative;
+}
+
+.img-flowers-game {
+    margin: 0 auto;
+    width: 80%;
+    align-self: center;
+}
+
+.game-over-container {
+    justify-content: center;
+    align-items: start;
+}
+
+.show {
+    display: grid;
+}
+
+.hide {
+    display: none;
+}
+
+.play-again {
+    font-size: var(--play-again-mobile);
+}
+
+.message {
+    font-size: var(--message-size-mobile);
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+}
+
+.correct {
+    color: var(--correct-answer-color);
+}
+
+.incorrect {
+    color: var(--primary-accent-color)
+}
+
+@media (min-width: 600px) {
+    .main-container {
+        overflow: unset;
+    }
+
+    .img-pencil {
+        display: block;
+        width: 75%;
+        position: absolute;
+        bottom: 150px;
+        left: -100px;
+    }
+
+    .img-pencil-game {
+        display: block;
+        width: 85%;
+        position: absolute;
+        bottom: 230px;
+        left: -130px;
+    }
+
+    .img-black-pen-game {
+        display: block;
+        position: absolute;
+        width: 75%;
+        top: 250px;
+        left: 160px;
+        transform: rotate(10deg);
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        padding: 0;
+    }
+
+    .main-container {
+        width: 900px;
+        min-height: 610px;
+        grid-template-rows: none;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0;
+    }
+
+    .left-column {
+        border-right: 2px solid black;
+    }
+
+    .left-column-start-background {
+        background: url("../public/images/0.png") no-repeat bottom center / contain;
+    }
+
+    .title-letters-container {
+        top: 195px;
+        left: 270px;
+    }
+
+    .letter-title {
+        font-size: var(--title-size-1000px);
+    }
+
+    .img-pencil, .img-pencil-game {
+        width: 85%;
+        bottom: 380px;
+        left: -70px;
+        transform: rotate(10deg);
+    }
+
+    .img-pencil-game {
+        bottom: 400px;
+    }
+
+    .start-button-container {
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .button-base {
+        font-size: var(--button-size-1000px);
+    }
+
+    .start-game {
+        margin-top: 0;
+        align-self: center;
+    }
+
+    .play-again {
+        font-size: var(--play-again-1000px);
+        margin-bottom: 1.5rem;
+    }
+
+    .img-black-pen {
+        width: 85%;
+        left: 140px;
+        top: 160px;
+    }
+
+    .img-black-pen-game {
+        width: 70%;
+        top: 355px;
+        left: 135px;
+        transform: rotate(18deg);    
+    }
+
+    .img-flowers {
+        width: 80%;
+        align-self: center;
+        margin-top: 5.5rem;
+    }
+    
+    .right-column {
+        min-height: unset;
+        height: 100%;
+        align-items: center;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    .img-flowers-game {
+        margin: 0 auto 1rem;
+        align-self: start;
+    }
+
+    .game-over-container {
+        height: 100%;
+    }
+
+    .message {
+        font-size: var(--message-size-1000px);
+        align-self: start;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .img-pencil, .img-pencil-game {
+        width: 90%;
+        bottom: 320px;
+        left: -175px;
+        transform: rotate(0deg);
+    }
+
+    .img-pencil-game {
+        bottom:  330px;
+    }
+    
+    .img-black-pen {
+        left: 190px;
+        top: 125px;
+        transform: rotate(10deg);
+    }
+
+    .img-black-pen-game {
+        width: 85%;
+        top: 150px;
+        left: 280px;
+        transform: rotate(40deg);
+    }
+}
+
+@media (min-width: 1725px) {
+    .main-container {
+        width: 1100px;
+        min-height: 800px;
+    }
+
+    .title-letters-container {
+        top: 260px;
+        left: 340px;
+    }
+
+    .letter-title {
+        font-size: var(--title-size-1700px);
+    }
+
+    .img-pencil, .img-pencil-game {
+        width: 95%;
+        bottom: 460px;
+        left: -250px;
+        transform: rotate(0deg);
+    }
+
+    .button-base {
+        font-size: var(--button-size-1700px);
+    }
+
+    .img-black-pen {
+        left: 240px;
+        top: 180px;
+    }
+
+    .img-black-pen-game {
+        width: 85%;
+        top: 110px;
+        left: 415px;
+        transform: rotate(15deg);   
+    }
+
+    .img-flowers {
+        margin-top: 8.5rem;
+    }
+
+    .img-flowers-game {
+        margin: 1rem auto 0;
+    }
+
+    .play-again {
+        font-size: var(--play-again-1700px);
+        margin-bottom: 2.8rem;
+    }
+
+    .message {
+        font-size: var(--message-size-1700px);
+    }
+}

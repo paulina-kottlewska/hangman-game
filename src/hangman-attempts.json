@@ -1,0 +1,37 @@
+[
+    {
+    "attempt": 0,
+     "src": "images/0.png",
+     "alt": "empty hangman post"
+    },
+    {
+    "attempt": 1,
+     "src": "images/1.png",
+     "alt": "hangman with head"
+    },
+    {
+    "attempt": 2,
+     "src": "images/2.png",
+     "alt": "hangman with head and torso"
+    },
+    {
+    "attempt": 3,
+     "src": "images/3.png",
+     "alt": "hangman with head, torso and one hand"
+    },
+    {
+    "attempt": 4,
+     "src": "images/4.png",
+     "alt": "hangman with head, torso and two hands"
+    },
+    {
+    "attempt": 5,
+     "src": "images/5.png",
+     "alt": "hangman with head, torso, two hands and one leg"
+    },
+    {
+    "attempt": 6,
+     "src": "images/6.png",
+     "alt": "hangman with head, torso, two hands and two legs"
+    }
+]
