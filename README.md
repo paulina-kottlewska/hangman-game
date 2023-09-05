@@ -39,13 +39,13 @@ The game has been designed to adapt seamlessly across various screen sizes, ensu
 
 ### Link
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://hangman-game-pk.netlify.app/
 
 ## My process
 
 The Hangman game was a part of "The Modern React Bootcamp" by Colt Steele on Udemy. Instead of strictly adhering to the course's guidance, which used class components, I utilized functional components and React hooks to build the game.
 
-The design I chose reminds me of playing Hangman traditionally - with a notebook and pen. The background mimics a desk, with the main container looking like a notebook page. To enhance the theme, I included elements like pencil, pen and eraser. I chose a few accent colors to keep the design clean and simple.
+The design I chose reminds me of playing Hangman traditionally - with a notebook and pen. The background mimics a desk, with the main container looking like a notebook page. To enhance the theme, I included elements like a pencil, pen, and eraser. I chose a few accent colors to keep the design clean and simple.
 I adopted a mobile-first design, and using CSS, incorporated layout techniques like Grid and Flexbox.
 To ensure the design adapted well to different screen sizes, I used CSS custom properties and media queries, adjusting the layout and fonts as needed.
 
