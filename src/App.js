@@ -65,7 +65,7 @@ function App() {
   }
 
   return (
-    <div className="main-container">
+    <div className={`main-container ${startGame ? "main-container-start-page" : ""}`}>
     {
       startGame ?
       <StartPage handleStartGame={handleStartGame} flowers={flowers} blackPen={blackPen} pencil={pencil}/>
