@@ -10,7 +10,7 @@
     
     /* Font sizes */
     --word-size-mobile: 1.7rem;
-    --buttons-size-mobile: 1.3rem;
+    --buttons-size-mobile: 1.35rem;
 
     --word-size-1000px: 2rem;
     --buttons-size-1000px: 1.6rem;
@@ -24,7 +24,7 @@
 }
 
 .img-hangman {
-    width: 250px;
+    width: 220px;
 }
 
 .letters-container {
